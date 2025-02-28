@@ -1,0 +1,81 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center;
+    background-color: #f4f7fa !important;
+    padding: 10px 0; /* Removes left/right padding */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left:50px; /* Moves content closer to the left edge */
+    padding-right: 10000px;
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: rgb(34, 33, 33) !important;
+    animation: fadeIn 0.8s ease-in-out;
+
+    
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px; /* Adds spacing between logo and text */
+    animation: zoomIn 0.6s ease-in-out;
+    
+}
+
+.navbar-text {
+    font-size: 18px;
+    font-weight: lighter;
+    color: rgb(14, 14, 14) !important;
+    animation: fadeIn 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Stacks text vertically */
+    line-height: 1.2; /* Adjusts spacing between lines */
+    text-align: left; /* Ensures text stays left-aligned */
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,195 @@
+/* General Form Layout */
+.skillwise-form-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skillwise-form-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Form Layout */
+  .skillwise-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Responsive Form Row */
+  .skillwise-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .skillwise-left-section,
+  .skillwise-right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 48%;
+  }
+  
+  .skillwise-form label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    padding: 0px;
+  }
+  
+  /* Input Fields */
+  .skillwise-form input {
+    font-size: 1rem;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .skillwise-form select,
+  .skillwise-form button {
+    font-size: 1rem;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button Styling */
+  .skillwise-form button {
+    background-color: #d1a5e6;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(26, 115, 232, 0.2);
+  }
+  
+  .skillwise-form button:hover {
+    background-color: #e19fe4;
+  }
+  
+  .skillwise-form button:active {
+    background-color: #a955ca;
+    transform: scale(0.98);
+  }
+  
+  .skillwise-form button:focus {
+    outline: 2px solid #b780ff;
+    outline-offset: 2px;
+  }
+  
+  /* Table Styling */
+  .skillwise-table-container {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+  }
+  
+  .skillwise-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 600px;
+  }
+  
+  .skillwise-table th,
+  .skillwise-table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+  }
+  
+  .skillwise-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  .skillwise-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .skillwise-table tr:hover {
+    background-color: #fae6f9;
+  }
+  
+  /* File Input */
+  .skillwise-input-file {
+    margin-top: 10px;
+  }
+  
+  /* Center Button */
+  .skillwise-button-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skillwise-form-container {
+      padding: 20px;
+    }
+  
+    .skillwise-form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .skillwise-left-section,
+    .skillwise-right-section {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .skillwise-form input,
+    .skillwise-form select,
+    .skillwise-form button {
+      font-size: 0.95rem;
+    }
+  
+    .skillwise-table {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skillwise-form-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .skillwise-form input,
+    .skillwise-form select,
+    .skillwise-form button {
+      font-size: 0.9rem;
+    }
+  
+    .skillwise-table th,
+    .skillwise-table td {
+      padding: 8px;
+    }
+  
+    .skillwise-form button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  

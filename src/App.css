@@ -1,0 +1,191 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lato:wght@300;400;700&display=swap');
+
+/* Global Styles */
+body {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(234, 234, 234, 0.8), rgba(220, 220, 220, 0.8)),
+              url("../src/images/Desktop.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Smooth Transition for all Elements */
+* {
+  transition: all 0.8s ease-in-out;
+}
+
+/* Heading Styling (E-Tray Assignment) */
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5c555c;
+  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: all 0.8s ease-in-out;
+  
+  
+}
+
+.centered {
+  position: absolute; /* or 'fixed' if you want it to stay in place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 5%;
+  padding-left: 2%;
+  z-index: 1000; /* Ensure it's above the navigation bar */
+}
+
+.moved-to-top {
+  position: absolute; /* Make sure it stays in place */
+  top: 20px; /* Adjust based on navbar height */
+  left: 50%;
+  transform: translateX(-25%);
+  z-index: 1000; /* Higher than the navbar */
+}
+
+/* Smooth, professional animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+
+/* Main Layout */
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Sidebar (Glassmorphism Effect) */
+.menu-container {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+/* Sidebar Items */
+.list-group {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.list-group-item {
+  font-size: 18px;
+  font-weight: 600;
+  background: transparent;
+  color: #444;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  gap: 20px;
+  
+}
+
+.list-group-item:hover {
+  background: #e0ccdf;
+  color: white;
+  transform: scale(1.05);
+}
+
+.list-group-item.active {
+  background: #d3bad3 !important;
+  color: white !important;
+}
+
+/* Content Section */
+.content-container {
+  width: 70%;
+  background: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-in-out;
+  margin-left: 300px; /* Space for sidebar */
+  margin-top: 100px;
+}
+
+/* Button Styling */
+.btn-primary {
+  background: #d8c0d6;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #d4b9d0;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
