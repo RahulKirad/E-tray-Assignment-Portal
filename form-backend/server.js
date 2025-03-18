@@ -8,6 +8,8 @@ const imap = require("imap");
 const { simpleParser } = require("mailparser");
 const { emailUser, emailPassword } = require('./emailCredentials');
 const skillwiseRoutes = require("./skillwiseRoutes"); 
+const industryRoutes = require ("./industryRoutes");
+
 
 
 console.log(emailUser, emailPassword);
@@ -20,7 +22,8 @@ app.use(cors());
 app.use(express.json());
 require('dotenv').config();
 app.use(express.urlencoded({ extended: true }));
-app.use("/api", skillwiseRoutes);
+app.use("/etray-api", skillwiseRoutes);
+app.use ("/etray-api" , industryRoutes);
 
 
 /**
@@ -193,7 +196,15 @@ function getQuestionsFromAllSheets(filePath) {
  * @param {string} time - Time of the activity
  */
 function logAdminActivity(adminName, students, senderName, senderEmail, allQuestions, date, time) {
-    const logFilePath = path.join(__dirname, "./admin_activity_log.xlsx");
+     const logDir = path.join(__dirname, "Admin Log");
+       const logFilePath = path.join(logDir, "./Course_admin_activity_log.xlsx"); // ✅ Define the log file path
+
+       // ✅ Ensure the directory exists
+         if (!fs.existsSync(logDir)) {
+           fs.mkdirSync(logDir, { recursive: true });
+         }
+         
+     
     const logEntries = students.map((student) => ({
         Admin: adminName,
         "Sender Name": senderName,
@@ -323,7 +334,7 @@ setInterval(() => {
 /**
  * Update response received for a student in the admin activity log
  */
-app.post("/api/update-response", async (req, res) => {
+app.post("/etray-api/update-response", async (req, res) => {
     const { email, responseReceived } = req.body;
 
     try {
@@ -359,7 +370,7 @@ app.post("/api/update-response", async (req, res) => {
 
 
 
-app.post("/api/submit", async (req, res) => {
+app.post("/etray-api/submit", async (req, res) => {
     try {
         const { course, year, semester, studentData, senderName, senderEmail, adminName = "CollegeAdminName" } = req.body;
 
