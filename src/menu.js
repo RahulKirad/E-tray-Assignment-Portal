@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-
+import "./menu.css";
 
 const Menu = ({ setSelectedMenu, selectedMenu }) => {
   const [expandedMenu, setExpandedMenu] = useState(null);
+  const [expandedSubMenu, setExpandedSubMenu] = useState(null);
 
   const toggleMenu = (menu) => {
     setExpandedMenu(expandedMenu === menu ? null : menu);
+    setExpandedSubMenu(null); // Reset sub-menu when switching main menu
+  };
+
+  const toggleSubMenu = (subMenu) => {
+    setExpandedSubMenu(expandedSubMenu === subMenu ? null : subMenu);
   };
 
   return (
@@ -20,18 +26,37 @@ const Menu = ({ setSelectedMenu, selectedMenu }) => {
         </button>
         {expandedMenu === 'academic' && (
           <>
+            {/* School Option */}
             <button
-              className={`list-group-item list-group-item-action ${selectedMenu === 'course' ? 'active' : ''}`}
-              onClick={() => setSelectedMenu('course')}
+              className={`list-group-item list-group-item-action ${selectedMenu === 'school' ? 'active' : ''}`}
+              onClick={() => setSelectedMenu('school')}
             >
-              Course Wise
+              School Portal 
             </button>
+
+            {/* College Menu */}
             <button
-              className={`list-group-item list-group-item-action ${selectedMenu === 'skills' ? 'active' : ''}`}
-              onClick={() => setSelectedMenu('skills')}
+              className="list-group-item list-group-item-secondary"
+              onClick={() => toggleSubMenu('college')}
             >
-              Skills Wise
+              College Portal {expandedSubMenu === 'college' ? '▼' : '▶'}
             </button>
+            {expandedSubMenu === 'college' && (
+              <>
+                <button
+                  className={`list-group-item list-group-item-action ms-3 ${selectedMenu === 'course' ? 'active' : ''}`}
+                  onClick={() => setSelectedMenu('course')}
+                >
+                  Course Wise
+                </button>
+                <button
+                  className={`list-group-item list-group-item-action ms-3 ${selectedMenu === 'skills' ? 'active' : ''}`}
+                  onClick={() => setSelectedMenu('skills')}
+                >
+                  Skills Wise
+                </button>
+              </>
+            )}
           </>
         )}
 
@@ -47,7 +72,7 @@ const Menu = ({ setSelectedMenu, selectedMenu }) => {
             className={`list-group-item list-group-item-action ${selectedMenu === 'industry' ? 'active' : ''}`}
             onClick={() => setSelectedMenu('industry')}
           >
-            Industry
+            Industry Portal
           </button>
         )}
       </div>

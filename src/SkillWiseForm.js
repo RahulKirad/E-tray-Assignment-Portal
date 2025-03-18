@@ -112,7 +112,6 @@ const SkillWiseForm = () => {
 
 
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
   

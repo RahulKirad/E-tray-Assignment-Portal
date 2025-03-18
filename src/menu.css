@@ -1,0 +1,92 @@
+/* Menu Container */
+.menu-container {
+    width: 100%;
+    max-width: 320px;
+    background: #3b73aa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  /* List Group */
+  .list-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Main Menu Buttons */
+  .list-group-item-secondary {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list-group-item-secondary:hover {
+    background-color: #495057;
+  }
+  
+  /* Sub Menu Items */
+  .list-group-item-action {
+    background: white;
+    color: #343a40;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .list-group-item-action:hover {
+    background: #dee2e6;
+  }
+  
+  /* Active Menu Item */
+  .list-group-item-action.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  /* Nested Submenu Styling */
+  .nested-menu {
+    padding-left: 20px; /* Align submenus properly */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Align icons properly */
+  .list-group-item-secondary span {
+    margin-left: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .menu-container {
+      max-width: 100%;
+    }
+  
+    .list-group-item-secondary,
+    .list-group-item-action {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .nested-menu {
+      padding-left: 15px;
+    }
+  }
+  

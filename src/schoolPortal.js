@@ -4,11 +4,11 @@ import './StudentForm.css';
 import ENDPOINTS from "./endpoint";
 
 
-const CourseWiseForm = () => {
+const SchoolPortal = () => {
   const [formData, setFormData] = useState({
-    course: 'Computer Science',
-    year: '1st Year',
-    semester: 'Sem 1',
+    course: '',
+    year: '',
+    semester: '',
     senderName: '',
     senderEmail: '',
   });
@@ -17,24 +17,32 @@ const CourseWiseForm = () => {
 
   const parameters = {
     course: {
-      label: 'Course',
+      label: 'Subject',
       options: [
-        'Computer Science',
-        'Data Science and Artificial Intelligence',
-        'Information Technology',
+        'Maths',
+        'Science',
+        'Computer',
+        'Physics',
+        'Chemistry',
+        'History ',
+        'Geography',
+        'Biology',
+        'English',
+        'Marathi',
+        'Hindi',
       ],
     },
     year: {
-      label: 'Year',
-      options: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
+      label: 'Standard',
+      options: ['1st ', '2nd ', '3rd ', '4th', '5th', '6th', '7th', '8th', '9th', '10th'],
     },
     semester: {
       label: 'Semester',
-      options: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6', 'Sem 7', 'Sem 8'],
+      options: ['Sem 1', 'Sem 2',],
     },
-    studentListHeading: 'Assignment Portal (Course Wise)',
+    studentListHeading: 'School Assignment Portal ',
     StudentTableHeading: 'Student List',
-    studentTableHeaders: ['Name', 'Roll No.', 'Skills', 'Email Id', 'Response Received'],
+    studentTableHeaders: ['Name', 'Roll No.', 'Standard', 'Email Id', 'Response Received'],
     fileUploadLabel: 'Upload Student File:',
   };
 
@@ -128,7 +136,7 @@ const CourseWiseForm = () => {
           <div className="left-section">
             <div className="name-email">
               <div>
-                <label htmlFor="senderName">College Name:</label>
+                <label htmlFor="senderName">School Name:</label>
                 <input
                   type="text"
                   id="senderName"
@@ -136,12 +144,12 @@ const CourseWiseForm = () => {
                   value={formData.senderName}
                   onChange={handleChange}
                   required
-                  placeholder="Name"
+                  placeholder="School Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="senderEmail">College Email Id:</label>
+                <label htmlFor="senderEmail">School Email Id:</label>
                 <input
                   type="email"
                   id="senderEmail"
@@ -149,12 +157,12 @@ const CourseWiseForm = () => {
                   value={formData.senderEmail}
                   onChange={handleChange}
                   required
-                  placeholder="Email Id"
+                  placeholder=" School Email Id"
                 />
               </div>
               {/* Added College ID Field */}
               <div>
-                <label htmlFor="collegeId">College ID:</label>
+                <label htmlFor="collegeId">School ID:</label>
                 <input
                   type="text"
                   id="collegeId"
@@ -162,13 +170,13 @@ const CourseWiseForm = () => {
                   value={formData.collegeId}
                   onChange={handleChange}
                   required
-                  placeholder="College ID"
+                  placeholder="School ID"
                 />
               </div>
 
               {/* Added College Phone Number Field */}
               <div>
-                <label htmlFor="collegenumber">College Phone Number:</label>
+                <label htmlFor="collegenumber">School Phone Number:</label>
                 <input
                   type="text"
                   id="collegenumber"
@@ -180,7 +188,7 @@ const CourseWiseForm = () => {
                   }}
                   maxLength="10"
                   required
-                  placeholder="College Phone Number"
+                  placeholder="School Phone Number"
                 />
               </div>
             </div>
@@ -271,4 +279,4 @@ const CourseWiseForm = () => {
   );
 };
 
-export default CourseWiseForm;
+export default SchoolPortal;
