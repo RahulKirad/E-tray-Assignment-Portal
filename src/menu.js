@@ -26,13 +26,7 @@ const Menu = ({ setSelectedMenu, selectedMenu }) => {
         </button>
         {expandedMenu === 'academic' && (
           <>
-            {/* School Option */}
-            <button
-              className={`list-group-item list-group-item-action ${selectedMenu === 'school' ? 'active' : ''}`}
-              onClick={() => setSelectedMenu('school')}
-            >
-              School Portal 
-            </button>
+            
 
             {/* College Menu */}
             <button

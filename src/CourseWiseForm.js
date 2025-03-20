@@ -224,10 +224,6 @@ const CourseWiseForm = () => {
               <label htmlFor="file">{parameters.fileUploadLabel}</label>
               <input type="file" onChange={readExcel} />
             </div>
-            <div>
-              <label htmlFor="questionFile">Upload Question File:</label>
-              <input type="file" id="questionFile" name="questionFile" />
-            </div>
 
           </div>
         </div>
