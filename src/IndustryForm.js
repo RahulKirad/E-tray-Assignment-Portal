@@ -140,10 +140,7 @@ const IndustryForm = () => {
     
             alert(result.message || "Emails sent successfully!");
     
-            setEmployeeFile(null);
-            setQuestionFile(null);
-            setEmployeeData([]);
-            setQuestionData([]);
+            
         } catch (error) {
             console.error("Error:", error);
             alert(`Error: ${error.message}`);

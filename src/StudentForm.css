@@ -3,7 +3,7 @@
   max-width: 900px;
   margin: 50px auto;
   padding: 30px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   
@@ -12,7 +12,7 @@
 h2 {
   text-align: center;
   font-size: 2rem;
-  color: #4a4a4a;
+  color: #051747;
   margin-bottom: 10px;
   font-family: 'Times New Roman', Times, serif;
   padding: 20px;
@@ -92,7 +92,7 @@ select {
 
 /* Button Styling */
 button {
-  background-color: #d1a5e6;
+  background-color: #607ddd;
   color: #000;
   font-weight: 600;
   border: none;
@@ -102,16 +102,16 @@ button {
 }
 
 button:hover {
-  background-color: #e19fe4;
+  background-color: #96b1cf;
 }
 
 button:active {
-  background-color: #a955ca;
+  background-color: #6189d3;
   transform: scale(0.98);
 }
 
 button:focus {
-  outline: 2px solid #b780ff;
+  outline: 2px solid #809dff;
   outline-offset: 2px;
 }
 
@@ -132,12 +132,12 @@ table {
 th,
 td {
   padding: 12px;
-  border: 1px solid #dee2e6;
+  border: 1px solid #709ecc;
   text-align: left;
 }
 
 th {
-  background-color: #f1f1f1;
+  background-color: #c7cad4;
   font-weight: bold;
 }
 
@@ -146,7 +146,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: #fae6f9;
+  background-color: #e6e8fa;
 }
 
 /* File Input */

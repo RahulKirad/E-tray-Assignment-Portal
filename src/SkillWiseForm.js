@@ -119,14 +119,20 @@ const SkillWiseForm = () => {
       return alert("Please upload both student and question files.");
     }
   
-    const formData = new FormData();
-    formData.append("students", studentFile);
-    formData.append("questions", questionFile);
+    const formDataObj = new FormData();
+    formDataObj.append("students", studentFile);
+    formDataObj.append("questions", questionFile);
+    formDataObj.append("collegeName", formData.senderName); // Adding college name
+    formDataObj.append("collegeEmail", formData.senderEmail); // Adding college email
+    formDataObj.append("collegeId", formData.collegeId); // Adding college ID
+    formDataObj.append("collegePhoneNumber", formData.collegePhoneNumber); // Adding college ID
+
+  
   
     try {
       const response = await fetch(ENDPOINTS.SUBMIT_SKILLWISE, {
         method: "POST",
-        body: formData, 
+        body: formDataObj, 
       });
   
       const result = await response.json();
@@ -135,12 +141,7 @@ const SkillWiseForm = () => {
       // ✅ Show success message
       alert(result.message || "Emails sent successfully!");
   
-      // ✅ Optionally, clear the uploaded files and reset form state
-      setStudentFile(null);
-      setQuestionFile(null);
-      setStudentData([]);
-      setQuestionData([]);
-  
+      
     } catch (error) {
       alert(`Error: ${error.message}`);
     }

@@ -11,6 +11,8 @@ const CourseWiseForm = () => {
     semester: 'Sem 1',
     senderName: '',
     senderEmail: '',
+    collegeId : '',
+    collegenumber:'',
   });
 
   const [studentData, setStudentData] = useState([]);
@@ -106,6 +108,8 @@ const CourseWiseForm = () => {
         body: JSON.stringify({
           ...formData,
           studentData,
+          collegeId: formData.collegeId,  // Ensure it is explicitly included
+          collegenumber: formData.collegenumber,
         }),
       });
 

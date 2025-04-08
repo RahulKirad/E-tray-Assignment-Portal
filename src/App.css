@@ -5,15 +5,18 @@
 
 /* Global Styles */
 body {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(234, 234, 234, 0.8), rgba(220, 220, 220, 0.8)),
-              url("../src/images/Desktop.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: 
+    linear-gradient(to right, rgba(185, 189, 204, 0.8), rgba(203, 209, 230, 0.8), rgba(214, 216, 221, 0.8)), 
+    url("../src/images/background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; /* Ensures the image stretches to fit the screen */
   font-family: 'Poppins', sans-serif;
-  color: #333;
+  color: #eaecf1;
   margin: 0;
   padding: 0;
 }
-
 
 /* Smooth Transition for all Elements */
 * {
@@ -24,53 +27,58 @@ body {
 h1 {
   position: absolute;
   left: 50%;
+  padding-left: 152px;
   transform: translateX(-50%);
   font-size: 39.5px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #5c555c;
-  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  color: #051747;
+  text-shadow: 4px 4px 15px rgba(12, 9, 9, 0.3);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transition: all 0.8s ease-in-out;
   display: flex;
   align-items: center; /* Align text and image in the same line */
   justify-content: center; /* Centers content */
-  gap: 0px; /* Adds sp
-  
-  
+  gap: 1.2px; 
 }
 
 .centered {
-  position: absolute; /* or 'fixed' if you want it to stay in place */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-bottom: 5%;
   padding-left: 2%;
-  z-index: 1000; /* Ensure it's above the navigation bar */
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .moved-to-top {
-  position: absolute; /* Make sure it stays in place */
-  top: 20px; /* Adjust based on navbar height */
+  position: absolute;
+  top: 20px;
   left: 40%;
   transform: translateX(-25%);
-  z-index: 1000; /* Higher than the navbar */
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  animation: fadeInTop 0.5s ease-in-out forwards;
 }
 
 /* Smooth, professional animation */
-@keyframes slideFadeIn {
-  0% {
+@keyframes fadeInTop {
+  from {
     opacity: 0;
-    transform: translate(-50%, -20px) scale(0.9);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translate(-50%, 0) scale(1);
   }
 }
-
 
 /* Main Layout */
 .container-fluid {
@@ -108,30 +116,29 @@ h1 {
   font-size: 18px;
   font-weight: 600;
   background: transparent;
-  color: #444;
+  color: #051747;
   border: none;
   padding: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   gap: 20px;
-  
 }
 
 .list-group-item:hover {
-  background: #e0ccdf;
+  background: #535f80;
   color: white;
   transform: scale(1.05);
 }
 
 .list-group-item.active {
-  background: #d3bad3 !important;
+  background: #8699d4 !important;
   color: white !important;
 }
 
 /* Content Section */
 .content-container {
   width: 70%;
-  background: white;
+  background: rgb(255, 255, 255);
   color: #333;
   border-radius: 12px;
   padding: 25px;
@@ -156,39 +163,27 @@ h1 {
 }
 
 .btn-primary:hover {
-  background: #d4b9d0;
+  background: #90bce0;
   transform: translateY(-3px);
 }
+
 .smalllogo {
-  width: 50px; /* Increase size */
+  width: 50px;
   height: 50px;
-  object-fit: contain; /* Ensures full image is visible */
+  object-fit: contain;
   margin-bottom: 40px;
   margin-left: auto;
   float: right;
-
-   /* Moves the logo to the right */
 }
 
 /* Animations */
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0);
   }
 }
@@ -196,10 +191,10 @@ h1 {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
     transform: translateX(0);
   }
 }

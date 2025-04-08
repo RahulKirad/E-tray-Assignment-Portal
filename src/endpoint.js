@@ -1,5 +1,4 @@
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:2024/etray-api";
-
+const BASE_URL = process.env.REACT_APP_BASE_URL; 
 const ENDPOINTS = {
   SUBMIT: `${BASE_URL}/submit`,
   UPDATE_RESPONSE: `${BASE_URL}/update-response`,
@@ -9,8 +8,8 @@ const ENDPOINTS = {
   UPDATE_INDUSTRY_RESPONSE: `${BASE_URL}/industry/update-response`,
 };
 
-// ✅ Debugging to check if endpoints are correctly set
+// ✅ Debugging to check if BASE_URL is loaded from environment
+console.log("BASE_URL:", BASE_URL);
 console.log("API Endpoints:", ENDPOINTS);
 
 export default ENDPOINTS;
-
