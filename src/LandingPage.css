@@ -1,0 +1,184 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* white background */
+    color: #333;
+  }
+  
+ .landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff; /* optional, reinforces white */
+}
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+    margin-left: 0.5rem;
+  }
+  
+  .company-name-line1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0e153d;
+    margin: 0;
+  }
+  
+  .company-name-line2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0e153d;
+    margin: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #05264e;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    color: white;
+    position: relative;
+  }
+  
+  .nav-center-title {
+    position: absolute;
+    padding-right: 2rem;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #21135e;
+    pointer-events: none; /* ensures clicks pass through to links */
+  }
+  
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.00rem; /* controls space between logo and title */
+  }
+  
+  .nav-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: rgb(13, 17, 71);
+  }
+  
+  .nav-logo {
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .nav-links li a {
+    color: #0a0e4d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #96aae0;
+  }
+  
+  .section.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0rem;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+  
+  .section.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #05264e;
+    padding-top: 1rem;
+    margin-top: 0;
+  }
+  
+  .section.header p {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+  }
+  
+  .enter-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #05264e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 7rem;
+  }
+  
+  .enter-btn:hover {
+    background-color: #031d3b;
+  }
+  
+  .footer {
+    background-color: #05264e;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer address {
+    margin-bottom: 0.5rem;
+    font-style: normal;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    .nav-title {
+      font-size: 1.25rem;
+      
+    }
+  
+    .section.header h1 {
+      font-size: 2rem;
+    }
+  
+    .section.header p {
+      font-size: 1rem;
+    }
+  
+    .enter-btn {
+      margin-top: 50rempx;
+      width: 100%;
+    }
+  }
+  

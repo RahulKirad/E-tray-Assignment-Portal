@@ -1,0 +1,189 @@
+/* Plain background for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Main container */
+  .about-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem 2rem;
+    background-color: #f0f8ff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  .about-navbar {
+    background-color: #6a7b8f;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Header styling */
+  .about-header h1 {
+    font-size: 2rem;
+  color: #1f4e79;
+  margin-bottom: 5rem;
+  text-align: center;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  padding-top: 0rem;
+  margin-top: 0rem;
+  }
+  
+  .about-header h3 {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  /* Section titles */
+  .about-section,
+.about-services,
+.about-collaboration,
+.about-recognition,
+.about-membership,
+.about-cta {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+  /* Who We Are Section */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    color: #555;
+  }
+  
+  /* Service, Collaboration, Membership, Recognition cards - Flex-based grid layout */
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Reusable card style */
+  .service-card,
+  .collab-card,
+  .membership-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .service-card:hover,
+  .collab-card:hover,
+  .membership-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Card title */
+  .service-card h3,
+  .collab-card h3,
+  .membership-card h3 {
+    margin-bottom: 0.5rem;
+    color: #294a63;
+  }
+  
+  /* CTA Quote */
+  .cta-quote {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Connect Button */
+  .connect-btn {
+    background-color: #1f4e79;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+  }
+  
+  .connect-btn:hover {
+    background-color: #163b5a;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-header h3 {
+      font-size: 1rem;
+    }
+  
+    .about-section h2,
+    .about-services h2,
+    .about-collaboration h2,
+    .about-recognition h2,
+    .about-membership h2,
+    .about-cta h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-section p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .service-card,
+    .collab-card,
+    .membership-card {
+      padding: 1rem;
+    }
+  
+    .card-wrapper {
+      grid-template-columns: 1fr; /* Stacks the cards vertically on small screens */
+    }
+  }
+  
